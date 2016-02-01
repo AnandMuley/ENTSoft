@@ -10,5 +10,10 @@ public class IndexViewController {
 	public String renderIndex() {
 		return "ENTSoft";
 	}
+	
+	@RequestMapping(value="aboutus")
+	public String renderAboutUs(){
+		return "AboutUs";
+	}
 
 }

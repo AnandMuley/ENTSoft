@@ -12,6 +12,9 @@
 <!-- Bootstrap Config -->
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/main.css">
 
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/site.css">
+
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>

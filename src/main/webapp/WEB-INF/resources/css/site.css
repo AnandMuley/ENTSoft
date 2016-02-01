@@ -1,0 +1,249 @@
+@CHARSET "UTF-8";
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url(../images/bg.jpg);
+	background-repeat: repeat;
+}
+
+#wrapper {
+	width: 1020px;
+	height: auto;
+	margin: 0px auto;
+}
+
+#header {
+	width: 980px;
+	height: 142px;
+	float: left;
+	background: url(../images/header.png);
+	background-repeat: no-repeat;
+	margin-top: 24px;
+}
+
+#logo {
+	width: 381px;
+	height: 102px;
+	float: left;
+	background: url(../images/logo.png);
+	margin-top: 23px;
+	margin-left: 6px;
+}
+
+#nav {
+	width: 592px;
+	height: 60px;
+	margin-top: 55px;
+	float: left;
+}
+
+#nav ul li {
+	font-family: Myriad Pro;
+	font-size: 17px;
+	color: White;
+	margin-top: -15px;
+	list-style-type: none;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #555555;
+	float: left;
+	padding: 10px 22px 14px 23px;
+}
+
+#nav ul li a:hover {
+	background-color: #00639e;
+	color: White;
+	padding: 10px 22px 14px 23px;
+}
+
+#nav ul li .active {
+	background-color: #00639e;
+	padding: 10px 22px 14px 23px;
+	color: white;
+}
+
+#banner {
+	width: 980px;
+	height: 266px;
+	float: left;
+	margin-top: 4px;
+}
+
+#middle_content {
+	width: 100%;
+	height: auto;
+	float: left;
+	background-color: #ffffff;
+	margin-top: 7px;
+}
+
+#heading_strip {
+	width: 800px;
+	height: 36px;
+	float: left;
+	background: url(../images/heading_strip.png);
+	margin: 9px 10px 6px 11px;
+	font-family: Myriad Pro;
+	font-size: 25px;
+	color: #ffffff;
+	padding-top: 5px;
+}
+
+#left_side {
+	width: 509px;
+	height: auto;
+	float: left;
+	background-color: #dddfde;
+	margin-left: 11px;
+	padding-bottom: 30px;
+}
+
+#right_side {
+	width: 459px;
+	height: 428px;
+	float: left;
+}
+
+#rounded_bg {
+	width: 980px;
+	height: 30px;
+	float: left;
+	background: url(../images/rounded_bg.png);
+}
+
+p {
+	font-weight: normal;
+	font-family: Arial;
+	font-size: 12px;
+	text-align: justify;
+	margin: 12px;
+	line-height: 22px;
+	width: 925px;
+}
+
+#heading2 {
+	width: 456px;
+	height: 36px;
+	float: left;
+	margin: 9px 10px 6px 11px;
+	font-family: Myriad Pro;
+	font-size: 22px;
+	border-bottom: 1px dotted black;
+	margin-top: 10px;
+	color: #00639e;
+	padding-top: 5px;
+}
+
+#footer {
+	width: 100%;
+	height: 73px;
+	border: 2px solid #d3e7f0;
+	float: left;
+	background-color: #4085bc;
+	border-radius: 5px;
+}
+
+/* CSS by yogesh  */
+.DetailInfo {
+	width: 958px;
+	height: auto;
+	float: left;
+	background-color: #dddfde;
+	margin-left: 11px;
+	margin-right: 11px;
+}
+
+.headingNew {
+	width: 935px;
+	height: 36px;
+	float: left;
+	margin: 9px 10px 6px 11px;
+	font-family: Myriad Pro;
+	font-size: 22px;
+	border-bottom: 1px dotted black;
+	margin-top: 10px;
+	color: #00639e;
+	padding-top: 5px;
+}
+
+#section1 {
+	width: 712px;
+	height: auto;
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 23px;
+}
+
+#section2 {
+	width: 850px;
+	height: auto;
+	float: left;
+	margin-left: 51px;
+}
+
+#sec1 {
+	width: 350px;
+	height: auto;
+	float: left;
+	margin-left: 126px;
+	margin-top: 43px;
+}
+
+#sec2 {
+	width: 216px;
+	height: auto;
+	float: left;
+}
+
+.img {
+	overflow: hidden;
+	float: right;
+	width: 214px;
+	margin: 0 0 1em 1em;
+	border: 1px solid #ddd;
+}
+
+#prasun {
+	width: 980px;
+	height: auto;
+	float: left;
+}
+
+/* css on date 18-10-13 */
+.BoxDiv1 {
+	width: 770px;
+	height: 150px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.BoxDiv2 {
+	width: 150px;
+	height: 150px;
+	float: left;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+
+/*pooja 23-10-2013*/
+.form_text {
+	padding: 0;
+	color: #707070;
+	font-size: 14px;
+	margin: 0.5em 0 0 0;
+	font-family: Calibri;
+}
+
+.select2 {
+	background: #fbfbfb;
+	border: 1px solid #BBB9B9;
+	box-shadow: 0 0 2px 0px #A1A3A2;
+	padding: 4px 4px;
+	border-radius: 5px;
+	width: 220px;
+	height: 15px;
+	outline: none;
+}
