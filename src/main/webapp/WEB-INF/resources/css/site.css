@@ -14,12 +14,14 @@ body {
 }
 
 #header {
-	width: 980px;
+	width: 98%;
 	height: 142px;
 	float: left;
-	background: url(../images/header.png);
 	background-repeat: no-repeat;
 	margin-top: 24px;
+	background-color: #F2F0E6;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
 }
 
 #logo {
@@ -73,7 +75,7 @@ body {
 }
 
 #middle_content {
-	width: 100%;
+	width: 98%;
 	height: auto;
 	float: left;
 	background-color: #ffffff;
@@ -138,7 +140,7 @@ p {
 }
 
 #footer {
-	width: 100%;
+	width: 98%;
 	height: 73px;
 	border: 2px solid #d3e7f0;
 	float: left;
@@ -212,7 +214,6 @@ p {
 	float: left;
 }
 
-/* css on date 18-10-13 */
 .BoxDiv1 {
 	width: 80%;
 	height: 150px;
@@ -228,7 +229,6 @@ p {
 	margin-bottom: 15px;
 }
 
-/*pooja 23-10-2013*/
 .form_text {
 	padding: 0;
 	color: #707070;

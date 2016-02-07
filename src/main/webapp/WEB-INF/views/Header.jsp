@@ -1,4 +1,4 @@
-<div class="masthead">
+<!-- <div class="masthead">
 	<h3 class="text-info">ENTSoft</h3>
 	<nav>
 		<ul class="nav nav-justified">
@@ -9,7 +9,22 @@
 			<li><a href="contactus">Contact Us</a></li>
 		</ul>
 	</nav>
+</div> -->
+<div id="header">
+	<div id="logo"></div>
+	<div id="nav">
+		<ul>
+			<li><a href="index" class="active">Home</a></li>
+			<li><a href="aboutus">About Us</a></li>
+			<li><a href="facilities">Facilities</a></li>
+			<li><a href="services">Services</a></li>
+			<li><a href="contactus">Contact Us</a></li>
+
+		</ul>
+
+	</div>
 </div>
+<br clear="all">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">

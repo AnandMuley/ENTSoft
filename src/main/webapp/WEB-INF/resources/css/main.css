@@ -128,7 +128,7 @@
 /* Carousel base class */
 .carousel {
 	height: 400px;
-	margin-bottom: 60px;
+	width: 98%;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
