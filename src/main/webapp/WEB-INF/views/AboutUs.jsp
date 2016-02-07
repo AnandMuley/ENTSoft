@@ -11,96 +11,139 @@
 <body class="site-body">
 	<div class="container">
 		<%@include file="Header.jsp"%>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-				<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-				<div class="item active left">
-					<img class="first-slide"
-						src="resources/images/banners/banner1.png"
-						alt="First slide">
-				</div>
-				<div class="item next left">
-					<img class="second-slide"
-						src="resources/images/banners/banner2.png"
-						alt="Second slide">
-				</div>
-				<div class="item">
-					<img class="third-slide"
-						src="resources/images/banners/banner3.png"
-						alt="Third slide">
-					<div class="container">
-					</div>
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" role="button"
-				data-slide="prev"> <span
-				class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a> <a class="right carousel-control" href="#myCarousel" role="button"
-				data-slide="next"> <span
-				class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-		</div>
 		<div id="middle_content">
 			<div id="heading_strip">
-				<img src="resources/images/icon.png"
-					style="margin-right: 13px; float: left; margin-top: 0px; margin-left: 19px;">Welcome
-				to Anvi Ent Clinic
+				<img src="resources/images/abt.png"
+					style="margin-right: 13px; float: left; margin-top: 0px; margin-left: 19px;">About Us
 			</div>
-			<div id="left_side" style="height: 416px;">
-				<p style="width: 486px;">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ear,
-					nose and throat (ENT) also known as Oto-Rhino-Laryngology is a
-					medical and surgical specialty that focuses not only on diseases
-					related to Ear Nose &amp; Throat but also on all head and neck
-					diseases and disorders. <br>
-					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘ANVI’
-					ENT Clinic is one of the most well equipped ENT clinics in Pune.
-					Located in the heart of Market Yard, this clinic caters to the ENT
-					needs of near by area like Kondwa, Undri, NIBM, Bibewadi, Mukund
-					Nagar Gultekdi and Camp. A relatively new clinic is as of now a
-					working in a smaller area with plans of expansion in near future.
-				</p>
-
-				<div id="heading2">
-					<img src="resources/images/facility.png"
-						style="margin-right: 13px; float: left; margin-top: -5px; margin-left: 19px;">Facilities
-					in the Clinic
-				</div>
-
-				<div>
-					<ul
-						style="font-family: Calibri; font-size: 16px; float: left; line-height: 26px; margin-left: 28px; margin-top: 0px; list-style-type: circle; color: #00639e;">
-
-
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;"> Endoscopy</a></li>
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;">Nasal
-								Endoscopy</a></li>
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;">Video-Laryangoscopy</a></li>
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;">Audiometry</a></li>
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;">Oto Microscopy</a></li>
-						<li><a href="Facilities.htm"
-							style="text-decoration: none; color: #00639e;">Bronchoscopy</a></li>
-					</ul>
-
-				</div>
-			</div>
-			<div id="right_side">
-				<img src="resources/images/img.png"
-					style="width: 442px; height: 415px; margin-left: 8px;">
-			</div>
-
+			<div id="left_side" style="width:98%;">
+				   <div id="prasun">
+				       <div id="section1">
+				       
+				         
+				         <div id="sec2" style="margin-left:170px; margin-top:11px;">
+				         <div style="width: 164px; border:1px solid #b9b7b7; text-align:center; padding:5px;">
+				             <img src="resources/images/ImageProxy.jpg" style="height: 160px; width: 160px"></div>
+				         </div>
+				       
+				       <div id="sec1" style="margin-left:-40px;margin-top:10px;">
+				         <p style="font-size:20px; color:#2c2a2a; margin-left: 38px;">Dr. ( Major) Prasun Mishra,</p><br> 
+					<p style="margin-top: -21px; margin-left: 39px; font-family:Verdana; font-size:13px; color: #2E42A7;">MS-ENT (AFMC)- Goldmedal,<br>
+					DNB ENT<br>
+					Fellowship in Lasers &amp; Voice disorders ( Belgium)</p>
+				
+				         
+				         
+				         </div>
+				       
+				       
+				       
+				       </div>
+				      
+				       <div id="section2">
+				       
+				       <p style="width:855px; margin:0px auto; font-size: 13px;">
+				       Dr Prasun is a well qualified ENT surgeon having done his MS ENT from Armed Forces Medical College ( AFMC) Pune which is India’s premier Medical institute, Here he has topped the course. <br>
+				       <br>
+				
+				He is qualified in all the common ENT surgeries with a special interest in disease related to Voice.<br>
+				<br>
+				 
+				For this he was also selected for the prestigious ICMR International fellowship in the year 2012-2013, under which he completed his fellowship in Laser and Voice disorders from Belgium, which is one of the leading centre dealing with laser and voice related problems.<br>
+				<br>
+				
+				He also has worked in the Army Medical Corps from year 2001-2006 as short service commission officer where he was awarded medal for excellence in service.<br>
+				<br>
+				
+				He has been awarded with the prize for the best ENT consultant paper award in Pune in the year 2010.<br>
+				<br>
+				
+				He presently holds the post of secretary of Association of ENT surgeons of Pune for the year 2013-14. He held the post of treasurer for the previous year. <br>
+				<br>
+				
+				       </p>
+				       
+				       </div>
+				       </div>
+				       
+				       
+				       <div id="prasun">
+				       <div id="section1">
+				       
+				       <div id="sec2" style="margin-left:170px; margin-top:11px;">
+				         <div style="width: 164px; border:1px solid #b9b7b7; text-align:center; padding:5px;">
+				             <img src="resources/images/ImageProxy2.jpg" style="height: 160px; width: 160px"></div>
+				         </div>
+				       
+				       
+				         <div id="sec1" style="margin-left:-40px;margin-top:10px;">
+				         <p style="font-size:20px; color:#2c2a2a; margin-left: 38px;">Dr. Geetanjali Mishra</p><br> 
+					<p style="margin-top: -21px; margin-left: 39px; font-family:Verdana; font-size:13px; color: #2E42A7;">Consultant Chest Physician &amp; Intensivist</p>
+				
+				         
+				         
+				         </div>
+				         
+				       
+				       </div>
+				      
+				       <div id="section2">
+				       
+				       <p style="width:855px; margin:0px auto; font-size: 13px;">
+				      Dr Geetanjali has done her MBBS from Mumbai and then went on to complete her specialization in Chest Medicine and Tubercular disease ( DTCD).<br>
+				<br>
+				She has worked in Nanavati Hospital Mumbai for 3 years before shifting to Pune. She was incharge of ICU in Pune Adventist hospital as well as Consultant Chest physician for 4 years.<br>
+				<br>
+				Presently she is ICU consultant in Inaamdar hospital and is attached to various hospital.
+				       </p>
+				       
+				       </div>
+				       </div>
+				        
+				        
+				        
+				        <div id="prasun">
+				       <div id="section1">
+				       
+				       <div id="sec2" style="margin-left:172px; margin-top:11px;">
+				         <div style="width: 164px; border:1px solid #b9b7b7; text-align:center; padding:5px;">
+				             <img src="resources/images/ImageP.png" style="height: 160px; width: 160px"></div>
+				         </div>
+				       
+				       
+				         <div id="sec1" style="margin-left:-40px;margin-top:10px;">
+				         <p style="font-size:20px; color:#2c2a2a; margin-left: 38px;">Dr. Nitish Kumar</p><br> 
+					<p style="margin-top: -21px; margin-left: 39px; font-family:Verdana; font-size:13px; color: #2E42A7;">
+					BASLP, AIISH MYSORE<br>
+				
+				Consultant Audiologist<br>
+				
+				Hearing Aid services.
+					</p>
+				
+				         
+				         
+				         </div>
+				         
+				       
+				       </div>
+				      
+				       <div id="section2">
+				       
+				       <p style="width:855px; margin:0px auto; font-size: 13px;">
+				      Mr Nitish Kumar is the audiologist who after completion of graudation from country’s one of the most prestigious speech and audiology college is offering his services in various centres in Pune.<br>
+				<br>
+				He counsels the patients regarding the type of hearing aid required and offers post purchase care and service of hearing aid device.<br>
+				
+				       </p>
+				       
+				       </div>
+				       </div>
+				        
+				        
+				        
+				     <!--<div id="right_side"></div>-->
+				     </div>
 		</div>
 		<%@include file="Footer.jsp"%>
 	</div>

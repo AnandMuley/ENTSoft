@@ -93,7 +93,7 @@ body {
 }
 
 #left_side {
-	width: 509px;
+	width: 58%;
 	height: auto;
 	float: left;
 	background-color: #dddfde;
@@ -148,7 +148,7 @@ p {
 
 /* CSS by yogesh  */
 .DetailInfo {
-	width: 958px;
+	width: 98%;
 	height: auto;
 	float: left;
 	background-color: #dddfde;
@@ -214,7 +214,7 @@ p {
 
 /* css on date 18-10-13 */
 .BoxDiv1 {
-	width: 770px;
+	width: 80%;
 	height: 150px;
 	float: left;
 	margin-bottom: 15px;

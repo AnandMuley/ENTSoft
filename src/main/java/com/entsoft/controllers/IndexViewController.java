@@ -15,5 +15,20 @@ public class IndexViewController {
 	public String renderAboutUs(){
 		return "AboutUs";
 	}
+	
+	@RequestMapping(value="facilities")
+	public String renderFacilities(){
+		return "Facilities";
+	}
+	
+	@RequestMapping(value="services")
+	public String renderServices(){
+		return "Services";
+	}
+	
+	@RequestMapping(value="contactus")
+	public String renderContactUs(){
+		return "ContactUs";
+	}
 
 }
