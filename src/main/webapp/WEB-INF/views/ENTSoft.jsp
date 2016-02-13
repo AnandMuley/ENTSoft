@@ -15,7 +15,7 @@
 			<div id="heading_strip">
 				<img src="resources/images/icon.png"
 					style="margin-right: 13px; float: left; margin-top: 0px; margin-left: 19px;">Welcome
-				to Anvi Ent Clinic
+				to Krishna Ent Clinic
 			</div>
 			<div id="left_side" style="height: 416px;">
 				<p style="width: 486px;">
@@ -24,11 +24,11 @@
 					medical and surgical specialty that focuses not only on diseases
 					related to Ear Nose &amp; Throat but also on all head and neck
 					diseases and disorders. <br>
-					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘ANVI’
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Krishna
 					ENT Clinic is one of the most well equipped ENT clinics in Pune.
-					Located in the heart of Market Yard, this clinic caters to the ENT
-					needs of near by area like Kondwa, Undri, NIBM, Bibewadi, Mukund
-					Nagar Gultekdi and Camp. A relatively new clinic is as of now a
+					Located in the heart of Sukhsagar Nagar, this clinic caters to the ENT
+					needs of near by area like Katraj, Pune-Satara Road, Bibwewadi, Kondhwa, Undri and NIBM. 
+					A relatively new clinic is as of now a
 					working in a smaller area with plans of expansion in near future.
 				</p>
 
