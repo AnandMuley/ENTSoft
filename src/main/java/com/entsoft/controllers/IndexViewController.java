@@ -10,25 +10,30 @@ public class IndexViewController {
 	public String renderIndex() {
 		return "ENTSoft";
 	}
-	
-	@RequestMapping(value="aboutus")
-	public String renderAboutUs(){
+
+	@RequestMapping(value = "aboutus")
+	public String renderAboutUs() {
 		return "AboutUs";
 	}
-	
-	@RequestMapping(value="facilities")
-	public String renderFacilities(){
+
+	@RequestMapping(value = "facilities")
+	public String renderFacilities() {
 		return "Facilities";
 	}
-	
-	@RequestMapping(value="services")
-	public String renderServices(){
+
+	@RequestMapping(value = "services")
+	public String renderServices() {
 		return "Services";
 	}
-	
-	@RequestMapping(value="contactus")
-	public String renderContactUs(){
+
+	@RequestMapping(value = "contactus")
+	public String renderContactUs() {
 		return "ContactUs";
+	}
+
+	@RequestMapping(value = "login")
+	public String renderLogin() {
+		return "Login";
 	}
 
 }

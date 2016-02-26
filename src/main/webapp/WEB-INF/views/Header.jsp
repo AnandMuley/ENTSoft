@@ -1,15 +1,24 @@
 <div id="header">
 	<div id="logo"></div>
 	<div id="nav">
-		<ul>
-			<li><a href="index" class="active">Home</a></li>
-			<li><a href="aboutus">About Us</a></li>
-			<li><a href="facilities">Facilities</a></li>
-			<li><a href="services">Services</a></li>
-			<li><a href="contactus">Contact Us</a></li>
-
-		</ul>
-
+		<c:choose>
+			<c:when test="${uid==null}">
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/index" class="active">Home</a></li>
+					<li><a href="${pageContext.request.contextPath}/aboutus">About Us</a></li>
+					<li><a href="${pageContext.request.contextPath}/facilities">Facilities</a></li>
+					<li><a href="${pageContext.request.contextPath}/services">Services</a></li>
+					<li><a href="${pageContext.request.contextPath}/contactus">Contact Us</a></li>
+					<li><a href="${pageContext.request.contextPath}/appointment">Appointment</a></li>
+				</ul>
+			</c:when>
+			<c:otherwise>
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/appointment">Book Appointment</a></li>
+					<li><a href="${pageContext.request.contextPath}/appointment/viewall">View Appointments</a></li>
+				</ul>
+			</c:otherwise>
+		</c:choose>
 	</div>
 </div>
 <br clear="all">
@@ -23,17 +32,17 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active left">
 					<img class="first-slide"
-						src="resources/images/banners/banner1.png"
+						src="${pageContext.request.contextPath}/resources/images/banners/banner1.png"
 						alt="First slide">
 				</div>
 				<div class="item next left">
 					<img class="second-slide"
-						src="resources/images/banners/banner2.png"
+						src="${pageContext.request.contextPath}/resources/images/banners/banner2.png"
 						alt="Second slide">
 				</div>
 				<div class="item">
 					<img class="third-slide"
-						src="resources/images/banners/banner3.png"
+						src="${pageContext.request.contextPath}/resources/images/banners/banner3.png"
 						alt="Third slide">
 					<div class="container">
 					</div>

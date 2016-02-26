@@ -47,9 +47,5 @@
 
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
-		
-	<!-- <jdbc:initialize-database>
-		<jdbc:script location="classpath:scripts/ICareDBCreation.sql"/>
-	</jdbc:initialize-database> -->
 
 </beans>

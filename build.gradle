@@ -94,7 +94,7 @@ repositories {
 }
 
 dependencies {
-	compile spring.datajpa,spring.core,spring.web,spring.webmvc,spring.security
+	compile spring.core,spring.web,spring.webmvc,spring.security
 	compile jodatime,servletApi,itextpdf,itextxml,commons.collections
 	compile commons.fileupload,javax.jstl,javax.el,commons.io
 	compile fasterXml.databind,fasterXml.jsonprovider,mongoDB,spring.mongo
