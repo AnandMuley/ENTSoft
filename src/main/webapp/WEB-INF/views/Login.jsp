@@ -1,55 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Book Appointment</title>
-<%@include file="Include.jsp"%>
-</head>
-<body>
-<div class="container">
-	<br/><br/><br/><br/><br/><br/>
-	<div class="col-md-4"></div>
-	<div id="login_content_panel" class="col-md-4">
-		<h3 class="text-info text-center">Krishna EnT</h3>
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-12">
-				<div align="center">
-					<form id="userAuthFrm" action="user/authenticate" method="post">
-					<div class="row">
-						<div class="col-md-12">
-							<input type="text" required="required" placeholder="Username" class="form-control input-group-lg" name="username"/>
-						</div>
-					</div>
-					<br/>
-					<div class="row">
-						<div class="col-md-12">
-							<input type="password" required="required" placeholder="Password" class="form-control input-group-lg" name="password"/>
-						</div>
-					</div>
-					<br/>
-					<div class="row">
-						<div class="col-md-12">
-							<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-						</div>
-					</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<br/>
-			<c:if test="${Message != null}">
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
-						<div align="center" class="alert alert-success" role="alert">${Message}</div>
-					</div>
-				</div>
-			</c:if>
-		<br/>
-	</div>
-</div>
-</body>
-</html>
+<form class="form-signin">
+      <img class="mb-4" src="https://getbootstrap.com/docs/4.1/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Login In</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <br/>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+
+</form>
