@@ -24,8 +24,12 @@ public class UserService {
 
 	public void registerUser(UserDto userDto) {
 		UserBean userBean = new UserBean();
-		userBean.setPassword(userDto.getPassword());
+		userBean.setFirstName(userDto.getFirstName());
+		userBean.setLastName(userDto.getLastName());
 		userBean.setUsername(userDto.getUsername());
+		userBean.setPassword(userDto.getPassword());
+		userBean.setEmailId(userDto.getEmailId());
+		userBean.setContactNo(userDto.getContactNo());
 		userRepository.save(userBean);
 		userDto.setId(userBean.getId());
 	}
