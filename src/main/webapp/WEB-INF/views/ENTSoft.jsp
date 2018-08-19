@@ -11,7 +11,9 @@
 <body class="site-body">
 	<div class="container">
 
-		<%-- @include file="Header.jsp" --%>
+        <c:if test="${uid != null}">
+		<%@include file="shared/Header.jsp" %>
+		</c:if>
         <!--
         <main role="main" class="container">
           <div class="starter-template">
@@ -22,7 +24,18 @@
 
           </div>
         </main>-->
-        <%@include file="Register.jsp"%>
+        <c:choose>
+            <c:when test="${viewName == 'Index'}">
+                <%@include file="Register.jsp"%>
+            </c:when>
+            <c:when test="${viewName == 'Login'}">
+                <%@include file="Login.jsp"%>
+            </c:when>
+            <c:when test="${viewName == 'Home'}">
+                <%@include file="Home.jsp"%>
+            </c:when>
+        </c:choose>
+
 		<%@include file="shared/Footer.jsp"%>
         <!-- Bootstrap core JavaScript
         ================================================== -->

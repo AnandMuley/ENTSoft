@@ -1,16 +1,15 @@
 package com.entsoft.repositories;
 
-import java.util.List;
-
+import com.entsoft.beans.Appointment;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.entsoft.beans.Appointment;
+import java.util.List;
 
 public interface AppointmentRepository extends
 		MongoRepository<Appointment, String> {
 
-	@Query(value = "{'datedOn':{$eq:'?0'}}")
+    @Query(value = "{'datedOn':'?0'}")
 	List<Appointment> findByDatedOn(String datedOn);
 
 }
