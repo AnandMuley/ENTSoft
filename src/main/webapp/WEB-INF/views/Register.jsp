@@ -40,6 +40,7 @@
       
 
       <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <a href="login">Login</a>
 
       <c:if test="${not empty message}">
         ${message}

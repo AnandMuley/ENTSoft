@@ -1,15 +1,14 @@
 package com.entsoft.repositories;
 
-import com.entsoft.beans.Appointment;
+import com.entsoft.beans.AppointmentBean;
 import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.data.mongodb.repository.Query;
 
+import java.util.Date;
 import java.util.List;
 
-public interface AppointmentRepository extends
-		MongoRepository<Appointment, String> {
+public interface AppointmentRepository extends MongoRepository<AppointmentBean, String> {
 
-    @Query(value = "{'datedOn':'?0'}")
-	List<Appointment> findByDatedOn(String datedOn);
+	//    @Query(value = "{'requestSubmittedOn':'?0'}")
+	List<AppointmentBean> findByRequestSubmittedOnAfter(Date requestSubmittedOn);
 
 }

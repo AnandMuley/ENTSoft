@@ -34,6 +34,9 @@
             <c:when test="${viewName == 'Home'}">
                 <%@include file="Home.jsp"%>
             </c:when>
+            <c:when test="${viewName == 'Booking'}">
+                <%@include file="Booking.jsp"%>
+            </c:when>
         </c:choose>
 
 		<%@include file="shared/Footer.jsp"%>

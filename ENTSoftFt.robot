@@ -3,5 +3,5 @@ Library           Selenium2Library
 
 *** Test Cases ***
 Login
-    Open Browser    http://localhost:8091/ENTSoft/index    firefox
-    Input Text    id=inputForename    Andie
+    Open Browser    https://localhost.o2.co.uk:9443/upgrade/store/phones    firefox
+    Close All Browsers

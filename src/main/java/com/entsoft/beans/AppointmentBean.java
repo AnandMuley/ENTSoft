@@ -1,8 +1,11 @@
-package com.entsoft.dtos;
+package com.entsoft.beans;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
-public class AppointmentDto extends UserDto {
+@Document(collection = "appointments")
+public class AppointmentBean extends UserBean {
 
     private Date requestSubmittedOn;
     private String bookingId;
@@ -25,10 +28,11 @@ public class AppointmentDto extends UserDto {
 
     @Override
     public String toString() {
-        return "AppointmentDto{" +
+        return "AppointmentBean{" +
                 "id='" + id + '\'' +
                 ", requestSubmittedOn=" + requestSubmittedOn +
                 ", bookingId='" + bookingId + '\'' +
                 '}';
     }
+
 }

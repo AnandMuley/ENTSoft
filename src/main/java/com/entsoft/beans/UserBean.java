@@ -7,11 +7,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class UserBean {
 
 	@Id
-	private String id;
-	private String firstName;
-	private String lastName;
-	private String emailId;
-	private String contactNo;
+    protected String id;
+    protected String firstName;
+    protected String lastName;
+    protected String emailId;
+    protected String contactNo;
 	private String username;
 	private String password;
 

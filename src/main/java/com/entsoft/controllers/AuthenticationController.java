@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 @RequestMapping(value = "user")
 @SessionAttributes({"uid"})
-public class AuthenticationController {
+public class AuthenticationController extends ViewRenderer {
 
     @Autowired
     private UserService userService;
@@ -32,15 +32,7 @@ public class AuthenticationController {
     public String authenticateUser(UserDto userDto, Model model, RedirectAttributes redirectAttributes) {
         UserDto foundUser = userService.authenticateUser(userDto);
         redirectAttributes.addFlashAttribute("uid", foundUser.getId());
-//        String view = "Login";
-//        if (foundUser != null) {
-//            String datedOn = "2016-02-27";
-//            List<AppointmentDto> appointmentDtos = appointmentService
-//                    .getAppointmentsFor(datedOn);
-//            model.addAttribute("searchResults", appointmentDtos);
-//            view = "Appointments";
-//        }
-        return "redirect:/home";
+        return "redirect:/appointment";
     }
 
     @RequestMapping(value = "create", method = RequestMethod.POST)
