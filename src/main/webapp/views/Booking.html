@@ -1,0 +1,49 @@
+<div class="login-container" ng-if="!authenticated">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <div class="site-title">ENTSoft</div>
+            <div class="site-subtitle">Appointment Booking</div>
+        </div>
+    </div>
+    <form novalidate>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input ng-model="user.firstName" type="text" required placeholder="First Name"
+                       class="form-control input-lg"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input required="required" ng-model="user.lastName" type="text" placeholder="Last Name"
+                       class="form-control input-lg"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input required="required" ng-model="user.contactNo" type="phone" placeholder="Contact No"
+                       class="form-control input-lg"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" align="center">
+                <button type="submit" ng-click="book()" class="btn btn-lg btn-success">Book</button>
+            </div>
+        </div>
+    </form>
+    <br/>
+    <div class="row" ng-if="message">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div align="center" class="alert" ng-class="{'alert-success':success,'alert-danger':!success}">{{message}}
+            </div>
+        </div>
+    </div>
+</div>
