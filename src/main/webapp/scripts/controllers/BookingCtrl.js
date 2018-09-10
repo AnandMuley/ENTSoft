@@ -1,9 +1,12 @@
 app.controller('BookingCtrl',
-		['$scope', function($scope){
+		['$scope','BookingService', function($scope,bookingService){
+
+    $scope.user = {};
 
      $scope.book = function(){
         $scope.success = true;
-        $scope.message = "Appointment booked successfully !";
+        bookingService.book($scope);
+//        $scope.message = "Appointment booked successfully !";
      }
 
 }]);
