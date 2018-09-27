@@ -2,7 +2,6 @@
 
 <web-app>
 	<display-name>ENTSoft</display-name>
-
 	<servlet>
 		<servlet-name>appservlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -13,9 +12,9 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>appservlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/ENTSoft/rest/*</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
-		<welcome-file>index</welcome-file>
+		<welcome-file>EntSoft.html</welcome-file>
 	</welcome-file-list>
 </web-app>

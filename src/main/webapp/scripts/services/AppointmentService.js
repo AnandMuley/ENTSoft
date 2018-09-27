@@ -1,10 +1,14 @@
-app.service('BookingService',['$http',function($http){
+app.service('AppointmentService',['RestApiBaseUrl','$http',function(RestApiBaseUrl,$http){
 
     this.book = function($scope){
         var user = $scope.user;
         $http({
             method : 'POST',
-            url : 'rest/bookings',
+            url : RestApiBaseUrl+'/appointments',
+            withCredentials: true,
+            headers : {
+                'Content-Type' : 'application/json;charset=utf-8'
+            },
             data : {
                 firstName : user.firstName,
                 lastName : user.lastName,

@@ -1,11 +1,11 @@
-app.controller('BookingCtrl',
-		['$scope','BookingService', function($scope,bookingService){
+app.controller('AppointmentCtrl',
+		['$scope','AppointmentService', function($scope,appointmentService){
 
     $scope.user = {};
 
      $scope.book = function(){
         $scope.success = true;
-        bookingService.book($scope);
+        appointmentService.book($scope);
 //        $scope.message = "Appointment booked successfully !";
      }
 

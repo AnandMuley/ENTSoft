@@ -6,10 +6,10 @@ var app = angular.module('ENTSoftUI',
 
 app.config([ '$routeProvider','$locationProvider', function($routeProvider,$locationProvider) {
 	$routeProvider.when('/', {
-		redirectTo: 'booking'
-	}).when('/booking', {
-		templateUrl : 'views/Booking.html',
-		controller : 'BookingCtrl'
+		redirectTo: 'appointment'
+	}).when('/appointment', {
+		templateUrl : 'views/AppointmentBooking.html',
+		controller : 'AppointmentCtrl'
 	}).when('/home', {
 		templateUrl : 'views/Home.html',
 		controller : 'HomeController'
@@ -17,5 +17,7 @@ app.config([ '$routeProvider','$locationProvider', function($routeProvider,$loca
 
 	$locationProvider.hashPrefix('');
 } ]);
+
+app.constant('RestApiBaseUrl','http://localhost:8091/ENTSoft/rest');
 
 var controllers = angular.module('ENTControllers', []);

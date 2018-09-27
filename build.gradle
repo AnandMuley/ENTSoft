@@ -127,6 +127,10 @@ gretty {
     servletContainer = 'jetty8'
     managedClassReload = true
     jacocoEnabled = false
+    contextPath = "/"
+//    serverConfigFile = file("$rootDir/web.xml")
+    fastReload = (["baseDir" : "src/main/webapp","pattern":"views/*","excludesPattern":"WEB-INF/*"])
+    inplaceMode = "soft"
 }
 
 repositories {
