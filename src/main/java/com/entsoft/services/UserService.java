@@ -1,33 +1,34 @@
 package com.entsoft.services;
 
+import com.entsoft.beans.UserBean;
+import com.entsoft.dtos.request.UserDto;
+import com.entsoft.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.entsoft.beans.UserBean;
-import com.entsoft.dtos.UserDto;
-import com.entsoft.repositories.UserRepository;
+import javax.naming.AuthenticationException;
+import java.util.Optional;
 
 @Service
 public class UserService {
 
-	@Autowired
-	private UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-	public UserDto authenticateUser(UserDto userDto) {
-		UserBean userBean = userRepository.findByUsernameAndPassword(
-				userDto.getUsername(), userDto.getPassword());
-		if (userBean != null) {
-			userDto.setId(userBean.getId());
-		}
-		return userDto;
-	}
+    public UserDto authenticateUser(UserDto userDto) throws AuthenticationException {
+        Optional<UserBean> userBean = userRepository.findByUsernameAndPassword(
+                userDto.username, userDto.password);
+        UserBean foundUser = userBean.orElseThrow(AuthenticationException::new);
+        userDto.id = foundUser.getId();
+        return userDto;
+    }
 
-	public void registerUser(UserDto userDto) {
-		UserBean userBean = new UserBean();
-		userBean.setPassword(userDto.getPassword());
-		userBean.setUsername(userDto.getUsername());
-		userRepository.save(userBean);
-		userDto.setId(userBean.getId());
-	}
+    public void registerUser(UserDto userDto) {
+        UserBean userBean = new UserBean();
+        userBean.setPassword(userDto.password);
+        userBean.setUsername(userDto.username);
+        userRepository.save(userBean);
+        userDto.id = userBean.getId();
+    }
 
 }

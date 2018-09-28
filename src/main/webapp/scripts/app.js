@@ -12,7 +12,10 @@ app.config([ '$routeProvider','$locationProvider', function($routeProvider,$loca
 		controller : 'AppointmentCtrl'
 	}).when('/home', {
 		templateUrl : 'views/Home.html',
-		controller : 'HomeController'
+		controller : 'HomeCtrl'
+	}).when('/login',{
+	    templateUrl : 'views/Login.html',
+	    controller : 'AuthenticationCtrl'
 	});
 
 	$locationProvider.hashPrefix('');

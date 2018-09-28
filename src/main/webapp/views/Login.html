@@ -1,0 +1,39 @@
+<div class="login-container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <div class="site-title">ENTSoft</div>
+            <div class="site-subtitle">Doctor Login</div>
+        </div>
+    </div>
+    <form novalidate>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input ng-model="user.username" type="text" required placeholder="Username" class="form-control input-lg"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <input required="required" ng-model="user.password" type="password" placeholder="Password" class="form-control input-lg"/>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" align="center">
+                <button type="submit" ng-click="login()" class="btn btn-lg btn-success">Login</button>
+            </div>
+        </div>
+    </form>
+    <br/>
+    <div class="row" ng-if="message">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div align="center" class="alert" ng-class="{'alert-success':success,'alert-danger':!success}">{{message}}
+            </div>
+        </div>
+    </div>
+</div>

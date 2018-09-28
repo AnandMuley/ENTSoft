@@ -1,4 +1,4 @@
-app.service('AuthenticationService',['$http','$cookies','$location',function($http,$cookies,$location){
+app.service('AuthenticationService',['$http','$cookies','$location','RestApiBaseUrl',function($http,$cookies,$location,RestApiBaseUrl){
 
 	
 	function incrementDate(givenDate,mins){
@@ -46,25 +46,20 @@ app.service('AuthenticationService',['$http','$cookies','$location',function($ht
 	    });
 	}
 
-	this.login = function(username,password,$scope,$rootScope,$location,adminPasscode){
+	this.login = function($scope,$location){
+	    let user = $scope.user;
 		$http({
 			method : 'POST',
-			url : 'rest/authentication/login',
+            withCredentials: true,
+			url : RestApiBaseUrl+'/authentication/login',
 			data : {
-				username : username,
-				password : password,
-				adminPasscode : adminPasscode!=undefined?window.btoa(adminPasscode):null
+				username : user.username,
+				password : user.password
 			}
-		}).success(function(data,status){
-			addCookie($cookies,true,data);
-			$rootScope.usr = data;
-			$rootScope.authenticated = true;
-			if(data.adminToken!=null){
-				$rootScope.admin = true;
-			}
+		}).then(function(data,status){
+		    $scope.user = {};
 			$location.path('/home');
-		}).error(function(data,status){
-			$rootScope.authenticated = false;
+		},function(data,status){
 			$scope.success = false;
 			$scope.message = data;
 		});
