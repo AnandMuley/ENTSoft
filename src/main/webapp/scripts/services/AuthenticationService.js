@@ -46,7 +46,7 @@ app.service('AuthenticationService',['$http','$cookies','$location','RestApiBase
 	    });
 	}
 
-	this.login = function($scope,$location){
+	this.login = function($scope){
 	    let user = $scope.user;
 		$http({
 			method : 'POST',

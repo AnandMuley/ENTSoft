@@ -23,12 +23,13 @@ public class UserService {
         return userDto;
     }
 
-    public void registerUser(UserDto userDto) {
+    public UserDto registerUser(UserDto userDto) {
         UserBean userBean = new UserBean();
         userBean.setPassword(userDto.password);
         userBean.setUsername(userDto.username);
         userRepository.save(userBean);
         userDto.id = userBean.getId();
+        return userDto;
     }
 
 }

@@ -6,19 +6,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.naming.AuthenticationException;
-
-@RestController("authentication")
-public class AuthenticationResource {
+@RestController
+@RequestMapping("users")
+public class UserResource {
 
     @Autowired
     private UserService userService;
 
     @PostMapping
-    public ResponseEntity login(@RequestBody UserDto userDto) throws AuthenticationException {
-        return ResponseEntity.ok(userService.authenticateUser(userDto));
+    public ResponseEntity register(@RequestBody UserDto userDto) {
+        return ResponseEntity.ok(userService.registerUser(userDto));
     }
 
 }
