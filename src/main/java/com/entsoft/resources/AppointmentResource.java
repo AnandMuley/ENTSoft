@@ -5,10 +5,7 @@ import com.entsoft.dtos.response.ResponseDto;
 import com.entsoft.services.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
@@ -19,7 +16,7 @@ public class AppointmentResource {
     private AppointmentService appointmentService;
 
     @PostMapping
-    public ResponseEntity create(AppointmentDto appointmentDto) {
+    public ResponseEntity create(@RequestBody AppointmentDto appointmentDto) {
         appointmentService.add(appointmentDto);
         return ResponseEntity.ok(ResponseDto.build("Booking successful !"));
     }

@@ -1,10 +1,15 @@
 package com.entsoft.dtos;
 
+import javax.servlet.http.HttpServletRequest;
+
 public class AppointmentDto {
 
-    public String firstName;
-    public String lastName;
-    public String contactNo;
+    private String firstName;
+    private String lastName;
+    private String contactNo;
+
+    public AppointmentDto() {
+    }
 
     public AppointmentDto(Builder builder) {
         firstName = builder.firstName;
@@ -12,11 +17,29 @@ public class AppointmentDto {
         contactNo = builder.contactNo;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getContactNo() {
+        return contactNo;
+    }
+
     public static class Builder {
 
         private String firstName;
         private String lastName;
         private String contactNo;
+
+        public Builder(HttpServletRequest request) {
+            firstName = request.getParameter("firstName");
+            lastName = request.getParameter("lastName");
+            contactNo = request.getParameter("contactNo");
+        }
 
         public Builder(String firstName, String lastName, String contactNo) {
             this.firstName = firstName;

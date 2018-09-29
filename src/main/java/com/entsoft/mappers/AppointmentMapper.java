@@ -9,9 +9,9 @@ public class AppointmentMapper {
 
     public Appointment map(AppointmentDto appointmentDto) {
         Appointment appointment = new Appointment.Builder()
-                .setFirstName(appointmentDto.firstName)
-                .setLastName(appointmentDto.lastName)
-                .setContactNo(appointmentDto.contactNo)
+                .setFirstName(appointmentDto.getFirstName())
+                .setLastName(appointmentDto.getLastName())
+                .setContactNo(appointmentDto.getContactNo())
                 .build();
         return appointment;
     }

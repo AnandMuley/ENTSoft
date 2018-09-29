@@ -24,9 +24,11 @@ public class Appointment {
 
     public Appointment(Builder builder) {
         id = builder.id;
+        firstName = builder.firstName;
+        lastName = builder.lastName;
+        contactNo = builder.contactNo;
         age = builder.age;
         datedOn = builder.datedOn;
-        contactNo = builder.contactNo;
         requestSubmittedOn = builder.requestSubmittedOn;
         timeSlot = builder.timeSlot;
         address = builder.address;
