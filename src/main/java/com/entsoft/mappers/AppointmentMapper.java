@@ -12,12 +12,15 @@ public class AppointmentMapper {
                 .setFirstName(appointmentDto.getFirstName())
                 .setLastName(appointmentDto.getLastName())
                 .setContactNo(appointmentDto.getContactNo())
+                .setDatedOn(appointmentDto.getDatedOnObj())
                 .build();
         return appointment;
     }
 
     public AppointmentDto map(Appointment appointment) {
-        return new AppointmentDto.Builder(appointment.getFirstName(), appointment.getLastName(), appointment.getContactNo()).build();
+        return new AppointmentDto.Builder(appointment.getFirstName(), appointment.getLastName(), appointment.getContactNo())
+                .setDatedOn(appointment.getDatedOn())
+                .build();
     }
 
 }

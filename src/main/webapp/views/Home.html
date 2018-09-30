@@ -1,4 +1,16 @@
-<h2>{{pageTitle}}</h2>
-<ul ng-repeat="appointment in appointments">
-    <li>{{appointment.firstName}} {{appointment.lastName}} - {{appointment.contactNo}}</li>
-</ul>
+<div class="col-md-4"></div>
+<div class="list-group col-md-4">
+    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Bookings for Today</h5>
+        </div>
+    </div>
+    <a ng-repeat="appointment in appointments" href="#"
+       class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-auto p-2">{{appointment.firstName}} {{appointment.lastName}}</h5>
+            <span class="p-2">{{appointment.contactNo}}</span>
+            <!--<small>{{appointment.datedOn.value|date:'dd-MMM-yyyy'}}</small>-->
+        </div>
+    </a>
+</div>

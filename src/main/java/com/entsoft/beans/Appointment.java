@@ -3,18 +3,18 @@ package com.entsoft.beans;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Document(collection = "appointments")
-public class Appointment {
+public class Appointment implements Comparable<Appointment> {
 
     @Id
     private String id;
     private String firstName;
     private String lastName;
-    private Integer age;
-    private String datedOn;
     private String contactNo;
+    private LocalDateTime datedOn;
     private Date requestSubmittedOn;
     private String timeSlot;
     private String address;
@@ -27,9 +27,8 @@ public class Appointment {
         firstName = builder.firstName;
         lastName = builder.lastName;
         contactNo = builder.contactNo;
-        age = builder.age;
-        datedOn = builder.datedOn;
-        requestSubmittedOn = builder.requestSubmittedOn;
+        datedOn = builder.datedOn.getValue();
+        requestSubmittedOn = new Date();
         timeSlot = builder.timeSlot;
         address = builder.address;
     }
@@ -46,12 +45,8 @@ public class Appointment {
         return lastName;
     }
 
-    public Integer getAge() {
-        return age;
-    }
-
-    public String getDatedOn() {
-        return datedOn;
+    public DatedOn getDatedOn() {
+        return new DatedOn(datedOn);
     }
 
     public String getContactNo() {
@@ -70,15 +65,24 @@ public class Appointment {
         return address;
     }
 
+    @Override
+    public int compareTo(Appointment o) {
+        int result = 0;
+        if (requestSubmittedOn.before(o.requestSubmittedOn)) {
+            result = 1;
+        } else if (requestSubmittedOn.after(o.requestSubmittedOn)) {
+            result = -1;
+        }
+        return result;
+    }
+
     public static class Builder {
 
         private String id;
         private String firstName;
         private String lastName;
-        private Integer age;
-        private String datedOn;
+        private DatedOn datedOn;
         private String contactNo;
-        private Date requestSubmittedOn;
         private String timeSlot;
         private String address;
 
@@ -97,23 +101,13 @@ public class Appointment {
             return this;
         }
 
-        public Builder setAge(Integer age) {
-            this.age = age;
-            return this;
-        }
-
-        public Builder setDatedOn(String datedOn) {
+        public Builder setDatedOn(DatedOn datedOn) {
             this.datedOn = datedOn;
             return this;
         }
 
         public Builder setContactNo(String contactNo) {
             this.contactNo = contactNo;
-            return this;
-        }
-
-        public Builder setRequestSubmittedOn(Date requestSubmittedOn) {
-            this.requestSubmittedOn = requestSubmittedOn;
             return this;
         }
 
@@ -138,7 +132,6 @@ public class Appointment {
                 "id='" + id + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", age=" + age +
                 ", datedOn='" + datedOn + '\'' +
                 ", contactNo=" + contactNo +
                 ", requestSubmittedOn=" + requestSubmittedOn +

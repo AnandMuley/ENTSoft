@@ -1,12 +1,16 @@
 package com.entsoft.dtos;
 
-import javax.servlet.http.HttpServletRequest;
+import com.entsoft.beans.DatedOn;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class AppointmentDto {
 
     private String firstName;
     private String lastName;
     private String contactNo;
+    private String datedOn;
 
     public AppointmentDto() {
     }
@@ -15,6 +19,7 @@ public class AppointmentDto {
         firstName = builder.firstName;
         lastName = builder.lastName;
         contactNo = builder.contactNo;
+        datedOn = builder.datedOn.getValue().toString();
     }
 
     public String getFirstName() {
@@ -29,22 +34,30 @@ public class AppointmentDto {
         return contactNo;
     }
 
+    public String getDatedOn() {
+        return datedOn;
+    }
+
+    public DatedOn getDatedOnObj() {
+        return new DatedOn(LocalDateTime.parse(datedOn, DateTimeFormatter.ISO_DATE_TIME));
+    }
+
     public static class Builder {
 
         private String firstName;
         private String lastName;
         private String contactNo;
-
-        public Builder(HttpServletRequest request) {
-            firstName = request.getParameter("firstName");
-            lastName = request.getParameter("lastName");
-            contactNo = request.getParameter("contactNo");
-        }
+        private DatedOn datedOn;
 
         public Builder(String firstName, String lastName, String contactNo) {
             this.firstName = firstName;
             this.lastName = lastName;
             this.contactNo = contactNo;
+        }
+
+        public Builder setDatedOn(DatedOn datedOn) {
+            this.datedOn = datedOn;
+            return this;
         }
 
         public AppointmentDto build() {

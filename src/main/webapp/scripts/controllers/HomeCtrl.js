@@ -1,7 +1,8 @@
 controllers.controller('HomeCtrl',
-		['$scope','AppointmentService', function($scope,appointmentService){
+		['$scope','$rootScope','AppointmentService', function($scope,$rootScope,appointmentService){
 
     $scope.pageTitle = "Home Page";
+    $rootScope.authenticated = true;
 
     appointmentService.getAll($scope);
 	

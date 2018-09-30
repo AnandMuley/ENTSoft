@@ -8,6 +8,7 @@
     <!-- Bootstrap Config -->
     <link rel="shortcut icon" type="image/png" href="images/capricorn.png"/>
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/justified-nav.css"> -->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,13 +24,14 @@
     <script type="text/javascript" src="node_modules/angular/angular.js"></script>
     <script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
     <script type="text/javascript" src="node_modules/angular-cookies/angular-cookies.js"></script>
-    <script type="text/javascript" src="scripts/lib/ui-bootstrap-tpls-0.13.4.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="scripts/app.js"></script>
     <!-- Controllers -->
     <script type="text/javascript" src="scripts/controllers/AppointmentCtrl.js"></script>
     <script type="text/javascript" src="scripts/controllers/HomeCtrl.js"></script>
+    <script type="text/javascript" src="scripts/controllers/DatePickerCtrl.js"></script>
     <script type="text/javascript" src="scripts/controllers/AuthenticationCtrl.js"></script>
     <!-- Services -->
     <script type="text/javascript" src="scripts/services/AuthenticationService.js"></script>
@@ -48,10 +50,10 @@
                 </div>
                 <div class="col-md-8" align="center">
                 </div>
-                <div align="right" ng-controller="AppSessionController" class="col-md-2 session-msg" align="right">
-                    <div class="site-subtitle">{{loginTimeMsg}}</div>
-                    <div class="site-subtitle" style="color: red;">{{sessionMessage}}</div>
-                </div>
+                <!--<div align="right" ng-controller="AppSessionController" class="col-md-2 session-msg" align="right">-->
+                <!--<div class="site-subtitle">{{loginTimeMsg}}</div>-->
+                <!--<div class="site-subtitle" style="color: red;">{{sessionMessage}}</div>-->
+                <!--</div>-->
             </div>
         </h3>
         <nav class="navbar navbar-inverse navbar-default">
@@ -69,7 +71,6 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="#/home">Home</a></li>
-                        <li><a href="#/teams">Teams</a></li>
                         <li><a href="#/manageprofile">Manage Profile</a></li>
                         <li ng-show="$rootScope.admin"><a href="#/admin">Administration</a></li>
                     </ul>

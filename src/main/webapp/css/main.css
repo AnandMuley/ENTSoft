@@ -297,3 +297,7 @@
 .cancel-icon{
 	font-size: 15px;
 }
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}

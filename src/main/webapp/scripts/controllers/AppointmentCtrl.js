@@ -1,7 +1,7 @@
 app.controller('AppointmentCtrl',
 		['$scope','AppointmentService', function($scope,appointmentService){
 
-    $scope.user = {};
+    $scope.user = {datedOn:new Date()};
 
      $scope.book = function(){
         $scope.success = true;

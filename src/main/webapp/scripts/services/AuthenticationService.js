@@ -1,4 +1,5 @@
-app.service('AuthenticationService',['$http','$cookies','$location','RestApiBaseUrl',function($http,$cookies,$location,RestApiBaseUrl){
+app.service('AuthenticationService',['$http','$cookies','$location','RestApiBaseUrl','$rootScope',
+            function($http,$cookies,$location,RestApiBaseUrl,$rootScope){
 
 	
 	function incrementDate(givenDate,mins){
@@ -58,6 +59,7 @@ app.service('AuthenticationService',['$http','$cookies','$location','RestApiBase
 			}
 		}).then(function(data,status){
 		    $scope.user = {};
+		    $rootScope.authenticated = true;
 			$location.path('/home');
 		},function(data,status){
 			$scope.success = false;

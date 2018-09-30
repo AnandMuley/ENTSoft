@@ -12,12 +12,13 @@ app.service('AppointmentService',['RestApiBaseUrl','$http',function(RestApiBaseU
             data : {
                 firstName : user.firstName,
                 lastName : user.lastName,
-                contactNo : user.contactNo
+                contactNo : user.contactNo,
+                datedOn : user.datedOn
             }
         }).then(function(data,status){
             $scope.message = 'Booking successful !';
             $scope.success = true;
-            $scope.user = {};
+            $scope.user = {datedOn : new Date()};
         },function(data,status){
             $scope.message = 'Something went wrong !';
             $scope.success = false;
