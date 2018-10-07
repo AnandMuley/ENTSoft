@@ -26,6 +26,19 @@ app.service('AppointmentService',['RestApiBaseUrl','$http',function(RestApiBaseU
 
     }
 
+    this.markAsDone = function(appointment,onSuccess,scope) {
+      $http({
+        method : 'PUT',
+        url : RestApiBaseUrl + '/appointments/' + appointment.id + '/DONE',
+        withCredentials : true,
+        headers : {
+          'Content-Type' : 'application/json'
+        }
+      }).then(onSuccess,function(data,status){
+        scope.message = 'Something went wrong !';
+      });
+    }
+
     this.getAll = function($scope){
         $http({
             method : 'GET',

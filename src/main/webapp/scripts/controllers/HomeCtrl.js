@@ -5,5 +5,11 @@ controllers.controller('HomeCtrl',
     $rootScope.authenticated = true;
 
     appointmentService.getAll($scope);
-	
+
+    $scope.analysedPatient = function(appointment){
+        appointmentService.markAsDone(appointment,function(){
+					appointmentService.getAll($scope);
+				},$scope);
+    }
+
 }]);

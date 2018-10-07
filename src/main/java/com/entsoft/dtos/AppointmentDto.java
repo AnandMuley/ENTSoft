@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 public class AppointmentDto {
 
+    private String id;
     private String firstName;
     private String lastName;
     private String contactNo;
@@ -20,6 +21,7 @@ public class AppointmentDto {
         lastName = builder.lastName;
         contactNo = builder.contactNo;
         datedOn = builder.datedOn.getValue().toString();
+        id = builder.id;
     }
 
     public String getFirstName() {
@@ -38,12 +40,17 @@ public class AppointmentDto {
         return datedOn;
     }
 
+    public String getId() {
+        return id;
+    }
+
     public DatedOn getDatedOnObj() {
         return new DatedOn(LocalDateTime.parse(datedOn, DateTimeFormatter.ISO_DATE_TIME));
     }
 
     public static class Builder {
 
+        private String id;
         private String firstName;
         private String lastName;
         private String contactNo;
@@ -57,6 +64,11 @@ public class AppointmentDto {
 
         public Builder setDatedOn(DatedOn datedOn) {
             this.datedOn = datedOn;
+            return this;
+        }
+
+        public Builder setId(String id) {
+            this.id = id;
             return this;
         }
 

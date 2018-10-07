@@ -1,17 +1,21 @@
-<div class="col-md-4"></div>
-<div class="list-group col-md-4">
-    <div class="list-group-item list-group-item-action flex-column align-items-start active">
+<h2>Bookings for Today</h2>
+<div class="list-group">
+    <!--<a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">-->
+    <!--<div class="d-flex w-100 justify-content-between">-->
+    <!--<h5 class="mb-1">Bookings for Today</h5>-->
+    <!--</div>-->
+    <!--&lt;!&ndash;<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>&ndash;&gt;-->
+    <!--<small>Donec id elit non mi porta.</small>-->
+    <!--</a>-->
+    <div ng-repeat="appointment in appointments"
+         class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Bookings for Today</h5>
+            <h5 class="mb-1">{{appointment.firstName}} {{appointment.lastName}}</h5>
+            <!--<small class="text-muted">Text</small>-->
+            <appointment-action ng-if="$first" on-submit="analysedPatient(appointment)"
+                                type="Progress"></appointment-action>
         </div>
+        <p class="mb-1">{{appointment.contactNo}}</p>
+        <!--<small class="text-muted">Donec id elit non mi porta.</small>-->
     </div>
-    <a ng-repeat="appointment in appointments" href="#"
-       class="list-group-item list-group-item-action flex-column align-items-start">
-        <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-auto p-2">{{appointment.firstName}} {{appointment.lastName}}</h5>
-            <span class="p-2">{{appointment.contactNo}}</span>
-            <!--<small>{{appointment.datedOn.value|date:'dd-MMM-yyyy'}}</small>-->
-            <appointment-action type="Progress"></appointment-action>
-        </div>
-    </a>
 </div>

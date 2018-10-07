@@ -18,9 +18,7 @@ public class Appointment implements Comparable<Appointment> {
     private Date requestSubmittedOn;
     private String timeSlot;
     private String address;
-
-    private Appointment() {
-    }
+    private Status status;
 
     public Appointment(Builder builder) {
         id = builder.id;
@@ -31,6 +29,14 @@ public class Appointment implements Comparable<Appointment> {
         requestSubmittedOn = new Date();
         timeSlot = builder.timeSlot;
         address = builder.address;
+        status = Status.BOOKED;
+    }
+
+    private Appointment() {
+    }
+
+    public Status getStatus() {
+        return status;
     }
 
     public String getId() {
@@ -61,8 +67,16 @@ public class Appointment implements Comparable<Appointment> {
         return timeSlot;
     }
 
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     public String getAddress() {
         return address;
+    }
+
+    public enum Status {
+        DONE, CANCELLED, BOOKED
     }
 
     @Override

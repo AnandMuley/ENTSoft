@@ -20,6 +20,7 @@ public class AppointmentMapper {
     public AppointmentDto map(Appointment appointment) {
         return new AppointmentDto.Builder(appointment.getFirstName(), appointment.getLastName(), appointment.getContactNo())
                 .setDatedOn(appointment.getDatedOn())
+                .setId(appointment.getId())
                 .build();
     }
 

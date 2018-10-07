@@ -1,5 +1,6 @@
 package com.entsoft.resources;
 
+import com.entsoft.beans.Appointment;
 import com.entsoft.dtos.AppointmentDto;
 import com.entsoft.dtos.response.ResponseDto;
 import com.entsoft.services.AppointmentService;
@@ -22,8 +23,14 @@ public class AppointmentResource {
     }
 
     @GetMapping
-    public ResponseEntity getAll() {
-        return ResponseEntity.ok(appointmentService.getAppointments());
+    public ResponseEntity getAllPending() {
+        return ResponseEntity.ok(appointmentService.getPendingAppointments());
+    }
+
+    @PutMapping("{id}/{status}")
+    public ResponseEntity markStatus(@PathVariable("id") String id, @PathVariable("status") Appointment.Status status) {
+        appointmentService.update(id, status);
+        return ResponseEntity.noContent().build();
     }
 
 
